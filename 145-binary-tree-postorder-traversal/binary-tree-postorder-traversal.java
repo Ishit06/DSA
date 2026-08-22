@@ -19,11 +19,11 @@ class Solution {
         Stack<TreeNode>stack=new Stack<>();
         TreeNode node=root;
         while(!stack.isEmpty() || node!=null){
-            while(node!=null){
+            if(node!=null){
             stack.push(node);
             node=node.left;
             }
-            if(stack.peek().right!=null){
+           else if(stack.peek().right!=null){
                 node=stack.peek().right;
             }
             else{
